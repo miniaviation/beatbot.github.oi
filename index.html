@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css">
+    <title>Beats bot</title>
+    <style>
+        /* Additional styles for the commands section */
+        .commands-section {
+            padding: 50px;
+            color: #ffffff; /* Text color for commands */
+        }
+
+        /* Box styling */
+        .command-box {
+            border: 2px solid #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        /* Copy button styling */
+        .copy-button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+
+        /* Home section styles */
+        .home-section {
+            padding: 50px;
+            color: #fff;
+            text-align: center;
+        }
+        .command-box {
+            background-color: rgba(185, 184, 184, 0.749);
+        }
+        .about {
+            padding: 50px;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-image: url('https://media.discordapp.net/attachments/1208867722218446858/1209243447945601095/image.png?ex=65e636b8&is=65d3c1b8&hm=ee6de4ddb7254f4108641e0c5957efa358a1da3031fb72a3612afc23246568e8&=&format=webp&quality=lossless&width=724&height=578'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="navbar">
+        <div class="logo">Beats bot</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#commands">Commands</a>
+            <a href="#about">About</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1204496811952177265&scope=bot&">Invite bot</a>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <div id="home" class="home-section">
+        <h1>Welcome to Beats Bot!</h1>
+        <p>Hello! I am Beats Bot, a music bot that is easy to host yourself! (v0.3.9)</p>
+        <p>I am owned by servantofallah_112 using JDA-Applications's Commands Extension (3.0.5) and the JDA library (4.4.1_353)</p>
+        <p>Type .help to see my commands!</p>
+        <p>Please <a href="https://discord.com/oauth2/authorize?client_id=1204496811952177265&scope=bot&permissions=70642768&guild_id=0">invite</a> me to your server!</p>
+        <p>Some of my features include:</p>
+        <ul>
+            🎶 High-quality music playback
+            🎶 FairQueue™ Technology
+            🎶 Easy to host yourself
+        </ul>
+    </div>
+
+    <!-- Commands Section -->
+    <div id="commands" class="commands-section">
+        <!-- Commands content goes here -->
+        <div id="commands" class="commands-section">
+            <h2>Beats Bot Commands:</h2>
+    
+            <div class="command-box" id="about-command">
+                <h3>About</h3>
+                <p>.about - shows info about the bot</p>
+                <button class="copy-button" onclick="copyToClipboard('#about-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="ping-command">
+                <h3>Ping</h3>
+                <p>.ping - checks the bot's latency</p>
+                <button class="copy-button" onclick="copyToClipboard('#ping-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="settings-command">
+                <h3>Settings</h3>
+                <p>.settings - shows the bot's settings</p>
+                <button class="copy-button" onclick="copyToClipboard('#settings-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="lyrics-command">
+                <h2>Music:</h2>
+                <h3>Lyrics</h3>
+                <p>.lyrics [song name] - shows the lyrics of a song</p>
+                <button class="copy-button" onclick="copyToClipboard('#lyrics-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="nowplaying-command">
+                <h3>Now Playing</h3>
+                <p>.nowplaying - shows the song that is currently playing</p>
+                <button class="copy-button" onclick="copyToClipboard('#nowplaying-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="play-command">
+                <h3>Play</h3>
+                <p>.play &lt;title|URL|subcommand&gt; - plays the provided song</p>
+                <button class="copy-button" onclick="copyToClipboard('#play-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="playlists-command">
+                <h3>Playlists</h3>
+                <p>.playlists - shows the available playlists</p>
+                <button class="copy-button" onclick="copyToClipboard('#playlists-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="queue-command">
+                <h3>Queue</h3>
+                <p>.queue [pagenum] - shows the current queue</p>
+                <button class="copy-button" onclick="copyToClipboard('#queue-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="remove-command">
+                <h3>Remove</h3>
+                <p>.remove &lt;position|ALL&gt; - removes a song from the queue</p>
+                <button class="copy-button" onclick="copyToClipboard('#remove-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="search-command">
+                <h3>Search</h3>
+                <p>.search &lt;query&gt; - searches Youtube for a provided query</p>
+                <button class="copy-button" onclick="copyToClipboard('#search-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="scsearch-command">
+                <h3>Soundcloud Search</h3>
+                <p>.scsearch &lt;query&gt; - searches Soundcloud for a provided query</p>
+                <button class="copy-button" onclick="copyToClipboard('#scsearch-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="shuffle-command">
+                <h3>Shuffle</h3>
+                <p>.shuffle - shuffles songs you have added</p>
+                <button class="copy-button" onclick="copyToClipboard('#shuffle-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="skip-command">
+                <h3>Skip</h3>
+                <p>.skip - votes to skip the current song</p>
+                <button class="copy-button" onclick="copyToClipboard('#skip-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="forceremove-dj-command">
+                <h2>DJ:</h2>
+                <h3>Force Remove</h3>
+                <p>.forceremove &lt;user&gt; - removes all entries by a user from the queue</p>
+                <button class="copy-button" onclick="copyToClipboard('#forceremove-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="forceskip-dj-command">
+                <h3>Force Skip</h3>
+                <p>.forceskip - skips the current song</p>
+                <button class="copy-button" onclick="copyToClipboard('#forceskip-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="movetrack-dj-command">
+                <h3>Move Track</h3>
+                <p>.movetrack &lt;from&gt; &lt;to&gt; - move a track in the current queue to a different position</p>
+                <button class="copy-button" onclick="copyToClipboard('#movetrack-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="pause-dj-command">
+                <h3>Pause</h3>
+                <p>.pause - pauses the current song</p>
+                <button class="copy-button" onclick="copyToClipboard('#pause-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="playnext-dj-command">
+                <h3>Play Next</h3>
+                <p>.playnext &lt;title|URL&gt; - plays a single song next</p>
+                <button class="copy-button" onclick="copyToClipboard('#playnext-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="repeat-dj-command">
+                <h3>Repeat</h3>
+                <p>.repeat [off|all|single] - re-adds music to the queue when finished</p>
+                <button class="copy-button" onclick="copyToClipboard('#repeat-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="skipto-dj-command">
+                <h3>Skip To</h3>
+                <p>.skipto &lt;position&gt; - skips to the specified song</p>
+                <button class="copy-button" onclick="copyToClipboard('#skipto-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="stop-dj-command">
+                <h3>Stop</h3>
+                <p>.stop - stops the current song and clears the queue</p>
+                <button class="copy-button" onclick="copyToClipboard('#stop-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="volume-dj-command">
+                <h3>Volume</h3>
+                <p>.volume [0-150] - sets or shows volume</p>
+                <button class="copy-button" onclick="copyToClipboard('#volume-dj-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="prefix-admin-command">
+                <h2>Admin:</h2>
+                <h3>Prefix</h3>
+                <p>.prefix &lt;prefix|NONE&gt; - sets a server-specific prefix</p>
+                <button class="copy-button" onclick="copyToClipboard('#prefix-admin-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="setdj-admin-command">
+                <h3>Set DJ</h3>
+                <p>.setdj &lt;rolename|NONE&gt; - sets the DJ role for certain music commands</p>
+                <button class="copy-button" onclick="copyToClipboard('#setdj-admin-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="setskip-admin-command">
+                <h3>Set Skip</h3>
+                <p>.setskip &lt;0 - 100&gt; - sets a server-specific skip percentage</p>
+                <button class="copy-button" onclick="copyToClipboard('#setskip-admin-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="settc-admin-command">
+                <h3>Set Text Channel</h3>
+                <p>.settc &lt;channel|NONE&gt; - sets the text channel for music commands</p>
+                <button class="copy-button" onclick="copyToClipboard('#settc-admin-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="setvc-admin-command">
+                <h3>Set Voice Channel</h3>
+                <p>.setvc &lt;channel|NONE&gt; - sets the voice channel for playing music</p>
+                <button class="copy-button" onclick="copyToClipboard('#setvc-admin-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="autoplaylist-owner-command">
+                <h2>Owner:</h2>
+                <h3>Auto Playlist</h3>
+                <p>.autoplaylist &lt;name|NONE&gt; - sets the default playlist for the server</p>
+                <button class="copy-button" onclick="copyToClipboard('#autoplaylist-owner-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="debug-owner-command">
+                <h3>Debug</h3>
+                <p>.debug - shows debug info</p>
+                <button class="copy-button" onclick="copyToClipboard('#debug-owner-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="playlist-owner-command">
+                <h3>Playlist</h3>
+                <p>.playlist &lt;append|delete|make|setdefault&gt; - playlist management</p>
+                <button class="copy-button" onclick="copyToClipboard('#playlist-owner-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="setavatar-owner-command">
+                <h3>Set Avatar</h3>
+                <p>.setavatar &lt;url&gt; - sets the avatar of the bot</p>
+                <button class="copy-button" onclick="copyToClipboard('#setavatar-owner-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="setgame-owner-command">
+                <h3>Set Game</h3>
+                <p>.setgame [action] [game] - sets the game the bot is playing</p>
+                <button class="copy-button" onclick="copyToClipboard('#setgame-owner-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="setname-owner-command">
+                <h3>Set Name</h3>
+                <p>.setname &lt;name&gt; - sets the name of the bot</p>
+                <button class="copy-button" onclick="copyToClipboard('#setname-owner-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="setstatus-owner-command">
+                <h3>Set Status</h3>
+                <p>.setstatus &lt;status&gt; - sets the status the bot displays</p>
+                <button class="copy-button" onclick="copyToClipboard('#setstatus-owner-command')">Copy</button>
+            </div>
+    
+            <div class="command-box" id="shutdown-owner-command">
+                <h3>Shutdown</h3>
+                <p>.shutdown - safely shuts down</p>
+                <button class="copy-button" onclick="copyToClipboard('#shutdown-owner-command')">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="about">
+        <!-- About content goes here -->
+        <h1>About <em>Beat bot</em></h1>
+        <p>Beat bot is a discord bot dedicated to music.</p>
+        <p>Beat bot was made by "servantofallah_112" and website by "miniaviation"</p>
+        <p>Beat bot can support any platform for your music. For example youtube, spotify and more.</p>
+        <p>The bot was created in Feb 6, 2024.</p>
+        <p>As of 2/21/2024 the bot is in 31 servers.</p>
+        <p><strong>Road to Verification! By Line Devs</strong></p>
+    </div>
+
+        <!-- invite-bot Section -->
+        <div id="invite-bot">
+            <!-- invite-bot goes here -->
+        </div>
+    
+    <!-- Copyright Section -->
+<footer style="text-align: center; margin-top: 50px; color: #fff;">
+    <p>&copy; 2024 Beats Bot. All rights reserved. Designed by miniaviation</p>
+</footer>
+
+
+    <script>
+        function copyToClipboard(elementClass) {
+            const commandText = document.querySelector(elementClass).innerText;
+            const textArea = document.createElement('textarea');
+            textArea.value = commandText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Command copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
